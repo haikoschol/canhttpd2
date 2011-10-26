@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="canhttpd2.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="canhttpd2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/canhttpd2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="0" selection-start="7326" selection-end="7326" vertical-scroll-proportion="0.36842105">
+            <state line="24" column="18" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="43" selection-start="428" selection-end="428" vertical-scroll-proportion="0.34623218">
               <folding />
             </state>
           </provider>
@@ -49,6 +58,7 @@
       <list>
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/canhttpd2.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -130,7 +140,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -182,6 +192,22 @@
       <module name="canhttpd2" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonDocTestRunConfigurationType" factoryName="Python's doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="canhttpd2" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
       <method />
     </configuration>
     <list size="1">
@@ -294,7 +320,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/canhttpd2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="0" selection-start="7326" selection-end="7326" vertical-scroll-proportion="0.36842105">
+        <state line="24" column="18" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="43" selection-start="428" selection-end="428" vertical-scroll-proportion="0.34623218">
           <folding />
         </state>
       </provider>

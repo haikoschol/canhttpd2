@@ -22,7 +22,7 @@ __author__ = 'Haiko Schol'
 __email__ = 'hs@haikoschol.com'
 __copyright__ = 'Copyright 2011, Haiko Schol'
 __license__ = 'MIT'
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 default_config = {

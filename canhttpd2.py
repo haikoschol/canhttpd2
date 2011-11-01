@@ -172,6 +172,32 @@ def make_canbus(cfg, testmode):
     return canbus
 
 
+def split_into_bytes(number, bytes, bytes_len):
+    """
+    Split a number into multiple single byte values.
+
+    Example:
+    >>> import array
+    >>> a = array.array('B')
+    >>> a.extend([0 for i in range(0, 8)])
+    >>> split_into_bytes(0x511, a, len(a))
+    >>> a
+    array('B', [255, 255, 255, 255, 255, 17, 0, 0])
+    
+    number - the number to split
+    bytes - an array-like object, where the result values are stored
+    bytes_len - max number of bytes to store in the result array
+    """
+    i = 0
+    max_index = min(number / 256, bytes_len - 1)
+    while i < max_index:
+        bytes[i] = 0xFF
+        i += 1
+
+    if i < bytes_len:
+        bytes[i] = number % 256
+
+
 class CanBusProxy(object):
     """
     CherryPy class that exposes the CAN-Bus proxy interface.
@@ -255,15 +281,20 @@ class CanBusProxy(object):
             msg.ID = self.canbus.canbus_id
             msg.LEN = 8
             msg.MSGTYPE = self.canbus.canbus_mode
-            msg.DATA[0] = numvalue
-            
+            split_into_bytes(numvalue, msg.DATA, msg.LEN)
+
             res = self.canbus.Write(self.canbus.canbus_channel, msg)
 
             if res != pcan.PCAN_ERROR_OK:
                 cherrypy.log(errmsg % (value, str(res)))
             else:
-                cherrypy.log('CANHTTPD2 Value <%s> has been sent onto CAN-Bus.'
-                             % value)
+                data_bytes = ['DATA[%s]: %s ' % (i, hex(msg.DATA[i]))
+                              for i in range(0, 8)]
+
+                cherrypy.log(
+                    'CANHTTPD2 Value <%s> has been sent onto CAN-Bus. %s'
+                    % (value, ''.join(data_bytes)))
+                
         except Exception, e:
             cherrypy.log(errmsg % (value, str(e)))
         return None
